@@ -1,5 +1,7 @@
+import Cadillac from "../components/Cadillac"
 import CarIntro from "../components/CarIntro"
 import MainPage from "../components/MainPage"
+
 
 
 function Home() {
@@ -7,6 +9,10 @@ function Home() {
     <div>
         <MainPage/>
         <CarIntro/>
+        <Cadillac/>
+       
+        
+       
         
       
     </div>

@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 function CarIntro() {
   const headingRef = useRef(null);
   const paraRef = useRef(null);
-  const containerRef = useRef(null);
+  const containerRef = useRef(null);//for pralex trigger
 
   useEffect(() => {
     // Make sure elements exist before animating

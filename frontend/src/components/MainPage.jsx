@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import SpeedImg from "../assets/images/speedster-seeklogo.png";
-import CarVideo from "../assets/video/wallpaper-f1-4k-test-edit-amd-2160-ytshorts.savetube.me.mp4";
+
+import CardilliacF1 from "../assets/video/Cadillac Formula 1™ Team Announcement _ Cadillac.mp4";
 
 function MainPage() {
   const h1Ref = useRef(null); // For image
@@ -40,7 +41,7 @@ function MainPage() {
       
       {/* Video Background */}
       <video className="background-video" autoPlay muted loop playsInline>
-        <source src={CarVideo} type="video/mp4" />
+        <source src={CardilliacF1} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
