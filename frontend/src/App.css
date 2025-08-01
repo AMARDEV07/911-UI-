@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "BaseNeueTrial";
+  src: url("./assets/fonts/640567150d3477f58943eed2_BaseNeueTrial-Condensed-BF63d645fc01437.ttf")
+    format("truetype"); /* ya otf ho toh 'opentype' */
+}
+@font-face {
+  font-family: "BaseNeueTrial-medium";
+  src: url("./assets/fonts/640567155c6176c92afed3b0_BaseNeueTrial-CondensedMedium-BF63d645e34f735.ttf")
+    format("truetype"); /* ya otf ho toh 'opentype' */
+}
+@font-face {
+  font-family: "BaseNeueTrial-Bd";
+  src: url("./assets/fonts/640567158128be0e320030e0_BaseNeueTrial-CondExtBd-BF63d645de5ba3d.ttf")
+    format("truetype"); /* ya otf ho toh 'opentype' */
+}
+@font-face {
+  font-family: "BaseNeueTrial-Normal";
+  src: url("./assets/fonts/6412f32865aa9b14751b0305_HelveticaNeue-Roman.otf")
+    format("opentype"); /* ya otf ho toh 'opentype' */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "BaseNeueTrial-Normal", sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Navbar styles */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem;
+  justify-content: space-around;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header h1 {
+  font-family: "BaseNeueTrial-medium";
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Link container */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Navigation ul styles */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-family: "BaseNeueTrial-Normal";
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: #333;
+}
+
+/* Button */
+button {
+  padding: 10px 50px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+
+
+
+
+/* MainPage with Video Background */
+.MainPage {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem;
+}
+
+/* Video Background */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Content Overlay */
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding-top: 2rem;
+}
+
+.speed-img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: brightness(10) saturate(100%);
+}
+
+.MainPage h1 {
+ 
+  line-height: 7rem;
+  letter-spacing: 2px;
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-family: "BaseNeueTrial-Bd";
+  font-weight: 500;
+}
+
+
+.MainPage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 62, 71, 0.3); /* Adjust opacity as needed */
+  z-index: 0;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .MainPage h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    letter-spacing: 5px;
+  }
+  
+  .speed-img {
+    width: 150px;
+  }
+}
+
+
+
+
+
+
+
+
+/* carIntro */
+
+
+
+/* CarIntro Styles */
+.carIntro {
+  width: 100%;
+  padding: 6rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7; 
+}
+
+.carIntro-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap; /* For mobile responsiveness */
+}
+
+.carIntro-text h1 {
+  width: 40%;
+  font-size: 5rem;
+  font-family: "BaseNeueTrial-Bd", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color:black;
+}
+
+.carIntro-text p {
+  width: 55%;
+  font-size: 1.4rem;
+  line-height: 1.7;
+ color:black;
+  font-family: "BaseNeueTrial-Normal", sans-serif;
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .carIntro-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carIntro-text h1,
+  .carIntro-text p {
+    width: 100%;
+  }
+
+  .carIntro-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
+
