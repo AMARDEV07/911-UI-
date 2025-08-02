@@ -71,12 +71,6 @@ function CarIntro() {
       },
       "-=1"
     );
-
-    // Cleanup function
-    return () => {
-      tl.kill();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
   }, []);
 
   return (
