@@ -668,7 +668,7 @@ button:hover {
 .first-div h1 {
   text-align: center;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-family: "BaseNeueTrial-Bd", sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
@@ -679,88 +679,129 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  margin-top: 6rem;
+  gap: clamp(2rem, 8vw, 8rem);
+  margin-bottom: 4rem;
   flex-wrap: wrap;
 }
 
-.innerdiv, span {
-  font-family: "BaseNeueTrial-Bd";
+.innerdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 250px; /* Prevents layout shifts and maintains structure */
+  position: relative;
+}
+
+/* Main number - fix vibration issue */
+.innerdiv span:first-child {
+  font-family: "BaseNeueTrial-Bd", sans-serif;
   font-weight: 400;
-  font-size: 5.5rem;
+  font-size: clamp(3.5rem, 8vw, 5.5rem);
   color: rgb(66, 66, 66);
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
-  padding-right: 3.4rem;
+  min-width: 200px; /* Fixed width prevents vibration */
+  text-align: center;
+  font-variant-numeric: tabular-nums; /* Monospace numbers for stability */
+  display: inline-block;
 }
 
-/* Sub-labels like "km", "hg" */
-.innerdiv span:nth-child(2),
-.innerdiv span:nth-child(3),
-.innerdiv2 span:nth-child(2),
-.innerdiv2 span:nth-child(3) {
-  font-size: 1.7rem;
-  font-family: "BaseNeueTrial-Normal";
+/* Unit labels (LB, MILE, IN, KW) */
+.innerdiv span:nth-child(2) {
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-family: "BaseNeueTrial-Normal", sans-serif;
+  color: rgb(100, 100, 100);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
-/* 🔧 Fixed Width Horizontal Line */
+/* Description labels (Curb Weight, Comb, etc.) */
+.innerdiv span:nth-child(3) {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-family: "BaseNeueTrial-Normal", sans-serif;
+  color: rgb(120, 120, 120);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+/* Horizontal Line */
 .Line {
-  width: 600px;
+  width: 100%;
+  max-width: 300px;
   height: 1px;
-  background-color: gray;
-  margin: 2rem auto 0 auto;
+  background-color: rgb(180, 180, 180);
+  margin: 0 auto;
   border-radius: 2px;
 }
 
-
-/* 📱 Responsive for tablets */
+/* Tablet styles */
 @media screen and (max-width: 1024px) {
-  .first-div h1 {
-    font-size: 2.5rem;
+  .first-div {
+    padding: 60px 15px;
   }
-
-  .innerdiv, span {
-    font-size: 4.5rem;
-    padding-right: 2rem;
+  
+  .counterdiv {
+    gap: clamp(1.5rem, 6vw, 4rem);
+    margin-bottom: 3rem;
   }
-
-  .innerdiv span:nth-child(2),
-  .innerdiv span:nth-child(3),
-  .innerdiv2 span:nth-child(2),
-  .innerdiv2 span:nth-child(3) {
-    font-size: 1.4rem;
+  
+  .innerdiv {
+    min-width: 200px;
   }
-
-  .Line {
-    width: 80%;
+  
+  .innerdiv span:first-child {
+    min-width: 150px;
   }
 }
 
-/* 📱 Responsive for mobile devices */
+/* Mobile styles */
 @media screen and (max-width: 768px) {
+  .first-div {
+    padding: 40px 10px;
+  }
+  
   .first-div h1 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
-
+  
   .counterdiv {
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: clamp(1rem, 4vw, 2rem);
+    margin-bottom: 2rem;
   }
-
-  .innerdiv, span {
-    font-size: 3.5rem;
-    padding-right: 1rem;
+  
+  .innerdiv {
+    min-width: 150px;
   }
-
-  .innerdiv span:nth-child(2),
-  .innerdiv span:nth-child(3),
-  .innerdiv2 span:nth-child(2),
-  .innerdiv2 span:nth-child(3) {
-    font-size: 1.2rem;
+  
+  .innerdiv span:first-child {
+    min-width: 120px;
   }
-
+  
   .Line {
-    width: 90%;
+    max-width: 200px;
+  }
+}
+
+/* Extra small mobile - stack in single column if needed */
+@media screen and (max-width: 480px) {
+  .counterdiv {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .innerdiv {
+    min-width: 200px;
+  }
+  
+  .innerdiv span:first-child {
+    min-width: 150px;
+  }
+  
+  .Line {
+    max-width: 250px;
   }
 }
