@@ -1,3 +1,4 @@
+/* RESET & FONT SETUP */
 * {
   margin: 0;
   padding: 0;
@@ -6,29 +7,19 @@
 
 @font-face {
   font-family: "BaseNeueTrial";
-  src: url("./assets/fonts/640567150d3477f58943eed2_BaseNeueTrial-Condensed-BF63d645fc01437.ttf")
-    format("truetype"); /* ya otf ho toh 'opentype' */
+  src: url("./assets/fonts/640567150d3477f58943eed2_BaseNeueTrial-Condensed-BF63d645fc01437.ttf") format("truetype");
 }
 @font-face {
   font-family: "BaseNeueTrial-medium";
-  src: url("./assets/fonts/640567155c6176c92afed3b0_BaseNeueTrial-CondensedMedium-BF63d645e34f735.ttf")
-    format("truetype"); /* ya otf ho toh 'opentype' */
+  src: url("./assets/fonts/640567155c6176c92afed3b0_BaseNeueTrial-CondensedMedium-BF63d645e34f735.ttf") format("truetype");
 }
 @font-face {
   font-family: "BaseNeueTrial-Bd";
-  src: url("./assets/fonts/640567158128be0e320030e0_BaseNeueTrial-CondExtBd-BF63d645de5ba3d.ttf")
-    format("truetype"); /* ya otf ho toh 'opentype' */
+  src: url("./assets/fonts/640567158128be0e320030e0_BaseNeueTrial-CondExtBd-BF63d645de5ba3d.ttf") format("truetype");
 }
 @font-face {
   font-family: "BaseNeueTrial-Normal";
-  src: url("./assets/fonts/6412f32865aa9b14751b0305_HelveticaNeue-Roman.otf")
-    format("opentype"); /* ya otf ho toh 'opentype' */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  src: url("./assets/fonts/6412f32865aa9b14751b0305_HelveticaNeue-Roman.otf") format("opentype");
 }
 
 body {
@@ -37,7 +28,7 @@ body {
   color: #000;
 }
 
-/* Navbar styles */
+/* HEADER / NAVBAR */
 .header {
   display: flex;
   align-items: center;
@@ -59,14 +50,12 @@ body {
   cursor: pointer;
 }
 
-/* Link container */
 .links {
   display: flex;
   align-items: center;
   gap: 4rem;
 }
 
-/* Navigation ul styles */
 nav ul {
   display: flex;
   list-style: none;
@@ -75,18 +64,16 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #000;
+  color: white;
   font-family: "BaseNeueTrial-Normal";
   font-size: 0.9rem;
   font-weight: 600;
-  color: white;
 }
 
 nav ul li a:hover {
   color: #333;
 }
 
-/* Button */
 button {
   padding: 10px 50px;
   background-color: #000;
@@ -100,24 +87,18 @@ button:hover {
   background-color: #333;
 }
 
-
-
-
-
-/* MainPage with Video Background */
+/* MAIN PAGE WITH VIDEO */
 .MainPage {
   width: 100%;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 8rem;
 }
 
-/* Video Background */
 .background-video {
   position: absolute;
   top: 0;
@@ -128,7 +109,17 @@ button:hover {
   z-index: -1;
 }
 
-/* Content Overlay */
+.MainPage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 62, 71, 0.3);
+  z-index: 0;
+}
+
 .content-overlay {
   position: relative;
   z-index: 1;
@@ -148,7 +139,6 @@ button:hover {
 }
 
 .MainPage h1 {
- 
   line-height: 7rem;
   letter-spacing: 2px;
   font-size: 6rem;
@@ -158,45 +148,7 @@ button:hover {
   font-weight: 500;
 }
 
-
-.MainPage::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(59, 62, 71, 0.3); /* Adjust opacity as needed */
-  z-index: 0;
-}
-
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .MainPage h1 {
-    font-size: 4rem;
-    line-height: 4.5rem;
-    letter-spacing: 5px;
-  }
-  
-  .speed-img {
-    width: 150px;
-  }
-}
-
-
-
-
-
-
-
-
-/* carIntro */
-
-
-
-/* CarIntro Styles */
+/* CAR INTRO */
 .carIntro {
   width: 100%;
   padding: 6rem 4rem;
@@ -213,7 +165,7 @@ button:hover {
   gap: 1rem;
   max-width: 1200px;
   width: 100%;
-  flex-wrap: wrap; /* For mobile responsiveness */
+  flex-wrap: wrap;
 }
 
 .carIntro-text h1 {
@@ -222,46 +174,23 @@ button:hover {
   font-family: "BaseNeueTrial-Bd", sans-serif;
   font-weight: 400;
   line-height: 1.2;
-  color:black;
+  color: black;
 }
 
 .carIntro-text p {
   width: 55%;
   font-size: 1.4rem;
   line-height: 1.7;
- color:black;
+  color: black;
   font-family: "BaseNeueTrial-Normal", sans-serif;
-  
 }
 
-
-
-@media (max-width: 768px) {
-  .carIntro-text {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .carIntro-text h1,
-  .carIntro-text p {
-    width: 100%;
-  }
-
-  .carIntro-text h1 {
-    font-size: 2.5rem;
-  }
-}
-
-
-
-/* cardic car f1 */
+/* CARDIC F1 VIDEO */
 .cardic-container {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   position: relative;
- 
 }
 
 .video-overlay1 {
@@ -287,7 +216,7 @@ button:hover {
 }
 
 .video-text h1 {
-   font-family: "BaseNeueTrial-Normal", sans-serif;
+  font-family: "BaseNeueTrial-Normal", sans-serif;
   font-size: 6rem;
   font-weight: bold;
   margin: 0;
@@ -300,6 +229,165 @@ button:hover {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* 🌟 FEATURE SECTION WITH PARALLAX */
+.feature {
+  width: 100%;
+  background-color: rgb(58, 62, 64);
+  color: white;
+  box-sizing: border-box;
+}
 
+.feature-inner {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
 
+.feature-text {
+  width: 48%;
+  z-index: 2;
+}
 
+.feature-heading {
+  font-size: 6rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  font-family: "BaseNeueTrial-Bd";
+  font-weight: 400;
+  margin-bottom: 6rem;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.feature-desc {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.feature-image {
+  width: 50%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.feature-image img {
+  height: 900px;
+  width: auto;
+  object-fit: cover;
+  transform-origin: center center;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* ✅ RESPONSIVE MEDIA QUERIES */
+@media (max-width: 992px) {
+  .feature-inner {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .feature-text,
+  .feature-image {
+    width: 100%;
+  }
+
+  .feature-image {
+    height: auto;
+    max-height: 500px;
+  }
+
+  .feature-image img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  .carIntro-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .carIntro-text h1,
+  .carIntro-text p {
+    width: 100%;
+  }
+
+  .carIntro-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .MainPage h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    letter-spacing: 5px;
+  }
+
+  .speed-img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-desc {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .feature-text {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .feature-image {
+    height: auto;
+    max-height: 450px;
+    width: 100%;
+  }
+
+  .feature-image img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .feature-desc {
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+  }
+
+  .feature-text {
+    padding: 1rem;
+  }
+
+  .feature-image {
+    max-height: 350px;
+  }
+}

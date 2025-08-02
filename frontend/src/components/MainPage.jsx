@@ -40,7 +40,7 @@ function MainPage() {
     <div className="MainPage">
       
       {/* Video Background */}
-      <video className="background-video" autoPlay loop playsInline>
+      <video className="background-video" autoPlay muted loop playsInline>
         <source src={CardilliacF1} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
