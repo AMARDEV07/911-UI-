@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <header className='header'>
 
-      <h1>Liuxu Auto</h1>
+      <h1>SPEEDSTER</h1>
 
       {/* Desktop Menu */}
       <div className='links'>
