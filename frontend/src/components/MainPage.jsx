@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SpeedImg from "../assets/images/speedster-seeklogo.png";
-import CardilliacF1 from "../assets/video/Cadillac Formula 1™ Team Announcement _ Cadillac.mp4";
+import CardilliacF1 from "../assets/video/The new Porsche 911 _ Iconic to the core - Trim.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
