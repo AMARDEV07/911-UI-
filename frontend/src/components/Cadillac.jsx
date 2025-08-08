@@ -1,5 +1,5 @@
 
-import CarVideo from "../assets/video/wallpaper-f1-4k-test-edit-amd-2160-ytshorts.savetube.me.mp4";
+import CarVideo from "../assets/video/The new Porsche 911 _ Iconic to the core - Trim.mp4";
 
 
 function Cadillac() {
@@ -14,8 +14,9 @@ function Cadillac() {
         
 
         <div className="video-text">
-          <h1>Cadillac Formula 1™ Team</h1>
+          <h1>911 Carrera GTS</h1>
           <p>Precision. Power. Performance.</p>
+          
         </div>
       </div>
     </div>
