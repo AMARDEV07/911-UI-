@@ -1389,3 +1389,174 @@ button:hover {
     width: 90%;
   }
 }
+
+
+/* color tabs  */
+.car-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #2e2e2e;
+  min-height: 100vh;
+  overflow: hidden; /* gap remove */
+}
+
+.car-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 0; /* no gap */
+}
+
+.car-img {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: cover; /* fills without gap */
+  display: block;
+}
+
+.car-text {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  z-index: 2;
+}
+
+.car-text p {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.car-text h1 {
+  letter-spacing: 1px;
+  font-size: 6rem;
+  font-family: "BaseNeueTrial-Bd", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: white;
+  margin: 5px 0 0;
+}
+
+.color-options {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  z-index: 2;
+}
+
+.color-circle {
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  border-radius: 50%;
+  transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.color-circle:hover {
+  transform: scale(1.15);
+}
+
+.color-circle.active {
+  border: 3px solid orange;
+}
+
+.car-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+
+@media (max-width: 1024px) {
+  .car-section {
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* BG image behind car */
+  .car-right {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    height: 100%;
+  }
+
+  /* BG animation effect */
+  .bg-img {
+    filter: brightness(0.5);
+    animation: bgMove 12s ease-in-out infinite;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .car-left {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* ✅ Car bottom pe set */
+    text-align: center;
+    height: 100vh; 
+    padding: 0;
+  }
+
+  /* Car image full bottom fit */
+  .car-img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh; 
+    object-fit: contain;
+    margin-top: auto; 
+  }
+
+  /* Text responsive */
+  .car-text {
+    margin-top: 10px;
+    order: -1 
+  }
+
+  .car-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .car-text h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Color options responsive */
+  .color-options {
+    justify-content: center;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .color-circle {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: 0.5rem;
+  }
+}
+
+
+/* Smooth BG movement */
+@keyframes bgMove {
+  0% { transform: scale(1) translateX(0); }
+  50% { transform: scale(1.05) translateX(-15px); }
+  100% { transform: scale(1) translateX(0); }
+}

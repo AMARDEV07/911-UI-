@@ -18,9 +18,9 @@ function Home() {
         <Cadillac/>
         <Feature/>
         <Specification/>
+         <CarCol/>
         <Angle/>
         <CarsImagesCollection/>
-        <CarCol/>
         <Footer/>
        
         

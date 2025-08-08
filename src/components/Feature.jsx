@@ -1,5 +1,6 @@
 import TierImage from "../assets/images/6410028a7250a372d38e95a5_service2.png";
 import SetImage from "../assets/images/6410028ad43efd1baa7b830c_service3.png";
+import Control from "../assets/images/6410028a4260e309c9af7ab6_service1.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -145,7 +146,7 @@ function Feature() {
           </p>
         </div>
         <div className="feature-image">
-          <img src={TierImage} alt="Wheel" />
+          <img src={Control} alt="Wheel" />
         </div>
       </div>
 
@@ -158,7 +159,7 @@ function Feature() {
           <img src={SetImage} alt="Brakes" />
         </div>
         <div className="feature-text">
-          <h1 className="feature-heading">Braking System</h1>
+          <h1 className="feature-heading">Smooth Seat SYSTEM</h1>
           <p className="feature-desc">
             Advanced braking technology with precision control and enhanced
             safety features for optimal performance under all driving
@@ -173,7 +174,7 @@ function Feature() {
       {/* Third Block (Example) */}
       <div className="feature-inner">
         <div className="feature-text">
-          <h1 className="feature-heading">Engine Performance</h1>
+          <h1 className="feature-heading">Dual Brakes</h1>
           <p className="feature-desc">
             High-performance engine with optimized fuel efficiency and reduced
             emissions delivering exceptional power and torque characteristics.
