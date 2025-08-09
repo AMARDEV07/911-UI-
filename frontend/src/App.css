@@ -4,7 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  max-width: 100%;
+}
 @font-face {
   font-family: "BaseNeueTrial";
   src: url("./assets/fonts/640567150d3477f58943eed2_BaseNeueTrial-Condensed-BF63d645fc01437.ttf") format("truetype");
@@ -608,12 +611,14 @@ button:hover {
   }
 
   .MainPage h1 {
+
     font-size: 2.2rem;
     line-height: 2.5rem;
     letter-spacing: 1px;
   }
 
   .speed-img {
+    padding-top: 10rem;
     width: 120px;
   }
 
