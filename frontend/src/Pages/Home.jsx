@@ -6,6 +6,7 @@ import CarsImagesCollection from "../components/CarsImagesCollection"
 import Feature from "../components/Feature"
 import Footer from "../components/Footer"
 import MainPage from "../components/MainPage"
+import Porshe from "../components/Porshe"
 import Specification from "../components/Specification"
 
 
@@ -15,6 +16,7 @@ function Home() {
     <div>
         <MainPage/>
         <CarIntro/>
+        <Porshe/>
         <Cadillac/>
         <Feature/>
         <Specification/>

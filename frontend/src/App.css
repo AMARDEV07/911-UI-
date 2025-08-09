@@ -27,7 +27,7 @@
 
 body {
   font-family: "BaseNeueTrial-Normal", sans-serif;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
   color: #000;
   overflow-x: hidden;
   /* Prevent horizontal overflow */
@@ -179,7 +179,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f7f7f7;
+ background-color: white;
   overflow: hidden;
 }
 
@@ -1559,4 +1559,111 @@ button:hover {
   0% { transform: scale(1) translateX(0); }
   50% { transform: scale(1.05) translateX(-15px); }
   100% { transform: scale(1) translateX(0); }
+}
+
+
+
+
+.porshe-wrapper {
+  padding: 5rem;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.porshe-logo-bg {
+    /* border: 2px solid black; */
+  position: absolute;
+  top: 19%;
+  padding: 2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.15; /* Porsche style faint */
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  z-index: 0;
+}
+
+.porshe-car {
+  padding-top: 8rem;
+ 
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  z-index: 1;
+}
+
+.porshe{
+  margin-top: 4rem;
+  font-size: 4rem;
+}
+/* Desktop styling untouched */
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .porshe-wrapper {
+    padding: 3rem;
+  }
+
+  .porshe-logo-bg {
+    width: 90%;
+    max-width: 600px;
+    top: 15%;
+  }
+
+  .porshe-car {
+    padding-top: 6rem;
+    width: 95%;
+  }
+
+  .porshe {
+    font-size: 3rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .porshe-wrapper {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .porshe-logo-bg {
+    width: 100%;
+    max-width: 400px;
+    top: 20%;
+    opacity: 0.1;
+  }
+
+  .porshe-car {
+    padding-top: 4rem;
+    width: 100%;
+  }
+
+  .porshe {
+    margin-top: 2rem;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .porshe-wrapper {
+    padding: 1rem;
+  }
+
+  .porshe-logo-bg {
+    max-width: 300px;
+    top: 18%;
+  }
+
+  .porshe {
+    font-size: 1.5rem;
+  }
 }
